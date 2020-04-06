@@ -1,5 +1,8 @@
 # Nova Inline Text
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/pdmfc/nova-inline-text.svg?style=flat-square)](https://packagist.org/packages/pdmfc/nova-inline-text)
+![Licencse](https://img.shields.io/github/license/pdmfc/nova-inline-text)
+
 This package lets you edit text fields directly on your resources pages.
 
 ## Installation
