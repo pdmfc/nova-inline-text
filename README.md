@@ -71,3 +71,32 @@ public function fields()
     ];
 }
 ```
+
+---
+
+## How to contribute
+
+- clone the repo
+- on `composer.json` of a laravel nova application add the following:
+
+```
+{
+    //...
+
+    "require" {
+        "pdmfc/nova-inline-text: "*"
+    },
+
+    //...
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../path_to_your_package_folder"
+        }
+    ],
+}
+```
+
+- run `composer update pdmfc/nova-inline-text`
+
+You're now ready to start contributing!
