@@ -25,6 +25,13 @@ class InlineText extends Field
     public $component = 'nova-inline-text';
 
     /**
+     * The event trigger used to save the field value,
+     *
+     * @var string
+     */
+    protected $event = 'keyup.enter';
+
+    /**
      * Allows field to be editable on index view.
      *
      * @param closure|null $callback
@@ -56,6 +63,16 @@ class InlineText extends Field
     }
 
     /**
+     *
+     */
+    public function saveOn(string $event)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
      * Resolve the field's value.
      *
      * @param  mixed  $resource
@@ -69,6 +86,7 @@ class InlineText extends Field
         $this->withMeta([
             'inlineOnIndex' => $this->inlineOnIndex,
             'refreshOnSaving' => $this->refreshOnSaving,
+            'event' => $this->event,
         ]);
     }
 }

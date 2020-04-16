@@ -8,7 +8,7 @@
       :class="errorClasses"
       :placeholder="field.name"
       v-model="value"
-      @keyup.enter="submit"
+      v-on="listener"
     />
     <span v-else class="whitespace-no-wrap">{{ field.value }}</span>
   </div>
@@ -45,10 +45,15 @@ export default {
           response => this.$toasted.show(response, { type: "error" })
         );
     },
+
     refreshTable() {
       if (this.shouldRefresh) {
         this.$parent.$parent.$parent.$parent.$parent.$parent.getResources();
       }
+    },
+
+    capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.substr(1);
     }
   },
 
@@ -63,6 +68,26 @@ export default {
 
     shouldRefresh() {
       return this.field.refreshOnSaving;
+    },
+
+    listener() {
+      const event = this.field.event.split(".");
+      const name = event[0];
+      const modifier = event[1] ? this.capitalize(event[1]) : null;
+
+      return {
+        [name]: e => {
+          if (this.valueWasNotChanged) return;
+
+          if (modifier && modifier === e.key) this.submit();
+
+          if (!modifier) this.submit();
+        }
+      };
+    },
+
+    valueWasNotChanged() {
+      return this.value === this.field.value;
     }
   }
 };
