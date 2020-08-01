@@ -37,7 +37,7 @@ export default {
         )
         .then(
           () => {
-            this.$toasted.show(`${this.field.name} updated`, {
+            this.$toasted.show(`${this.field.name} updated ${this.value}`, {
               type: 'success',
             });
 
