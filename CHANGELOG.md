@@ -4,8 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [[1.1.2] 2020-12-28](https://github.com/pdmfc/nova-inline-text/compare/v1.1.1...v1.1.2) 
 ### Added
+- Caveats section to the docs. ([806b3c6](https://github.com/pdmfc/nova-inline-text/commit/806b3c6654640866d9784129b47472cd3020539c))
 - `CHANGELOG.md` file to keep track of new/upcoming changes. ([033b111](https://github.com/pdmfc/nova-inline-text/commit/033b111370f8874bdd89b93daa4d37576e835c8e))
 ---
 ## [[1.1.1] 2020-05-12](https://github.com/pdmfc/nova-inline-text/compare/v1.1...v1.1.1)
