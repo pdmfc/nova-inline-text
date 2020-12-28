@@ -1,7 +1,8 @@
 # Nova Inline Text
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pdmfc/nova-inline-text.svg?style=flat-square)](https://packagist.org/packages/pdmfc/nova-inline-text)
-![License](https://img.shields.io/github/license/pdmfc/nova-inline-text.svg?style=flat-square)
+[![Version](https://poser.pugx.org/pdmfc/nova-inline-text/version)](https://packagist.org/packages/pdmfc/nova-inline-text)
+[![Total Downloads](https://poser.pugx.org/pdmfc/nova-inline-text/downloads)](https://packagist.org/packages/pdmfc/nova-inline-text)
+[![License](https://poser.pugx.org/pdmfc/nova-inline-text/license)](https://packagist.org/packages/pdmfc/nova-inline-text)
 
 This package lets you edit text fields directly on your resources pages.
 
