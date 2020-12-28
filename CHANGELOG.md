@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- `CHANGELOG.md` file to keep track of new/upcoming changes. ([]())
+- `CHANGELOG.md` file to keep track of new/upcoming changes. ([033b111](https://github.com/pdmfc/nova-inline-text/commit/033b111370f8874bdd89b93daa4d37576e835c8e))
 ---
 ## [[1.1.1] 2020-05-12](https://github.com/pdmfc/nova-inline-text/compare/v1.1...v1.1.1)
 ### Changed
