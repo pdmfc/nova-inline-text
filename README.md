@@ -29,7 +29,7 @@ public function fields()
 
 ### Making it editable
 
-By default this field behaves like a regular text field. To be able to edit it on the index page, use the `inlineOnIndex()` method:
+By default, this field behaves like a regular text field. To be able to edit it on the index page, use the `inlineOnIndex()` method:
 
 ```php
 public function fields()
@@ -103,6 +103,15 @@ public function fields()
 }
 ```
 
+---
+## :warning: Caveats
+- When updating the field, make sure you add the `sometimes` validation rule to the rest of the fields that are required:
+
+    ```php
+    Text::make('Email')
+        ->rules('required', 'email')
+        ->updateRules('sometimes') // Add these method call and validation rule to the fields that are required
+    ```
 ---
 
 ## How to contribute
