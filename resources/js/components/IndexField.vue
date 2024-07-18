@@ -37,13 +37,13 @@ export default {
         )
         .then(
           () => {
-            this.$toasted.show(`${this.field.name} updated`, {
-              type: 'success',
-            });
+              Nova.success(this.field.successMessage ? this.field.successMessage : `${this.field.name} updated`);
 
             this.refreshTable();
           },
-          (response) => this.$toasted.show(response, { type: 'error' })
+          (response) => {
+              Nova.error(response?.response?.data?.message ?? response)
+          }
         );
     },
 

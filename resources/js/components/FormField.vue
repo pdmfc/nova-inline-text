@@ -1,16 +1,21 @@
 <template>
-    <default-field :field="field" :errors="errors">
-        <template slot="field">
+    <DefaultField
+        :field="field"
+        :errors="errors"
+        :show-help-text="showHelpText"
+        :full-width-content="fullWidthContent"
+    >
+        <template #field>
             <input
-                :id="field.name"
+                :id="field.attribute"
                 type="text"
-                class="w-full form-control form-input form-input-bordered"
+                class="w-full form-control form-input form-control-bordered"
                 :class="errorClasses"
                 :placeholder="field.name"
                 v-model="value"
             />
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
@@ -33,14 +38,7 @@ export default {
          * Fill the given FormData object with the field's internal value.
          */
         fill(formData) {
-            formData.append(this.field.attribute, this.value || '')
-        },
-
-        /**
-         * Update the field's internal value.
-         */
-        handleChange(value) {
-            this.value = value
+            formData.append(this.fieldAttribute, this.value || '')
         },
     },
 }

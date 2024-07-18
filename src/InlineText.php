@@ -32,6 +32,13 @@ class InlineText extends Field
     protected $event = 'keyup.enter';
 
     /**
+     * The message to be displayed when the field is saved.
+     *
+     * @var string|null
+     */
+    protected $successMessage = null;
+
+    /**
      * Allows field to be editable on index view.
      *
      * @param closure|null $callback
@@ -63,8 +70,17 @@ class InlineText extends Field
     }
 
     /**
+     * Set the message to be displayed when the field is saved.
      *
+     * @return self
      */
+    public function successMessage(string $message)
+    {
+        $this->successMessage = $message;
+
+        return $this;
+    }
+
     public function saveOn(string $event)
     {
         $this->event = $event;
@@ -86,6 +102,7 @@ class InlineText extends Field
         $this->withMeta([
             'inlineOnIndex' => $this->inlineOnIndex,
             'refreshOnSaving' => $this->refreshOnSaving,
+            'successMessage' => $this->successMessage,
             'event' => $this->event,
         ]);
     }

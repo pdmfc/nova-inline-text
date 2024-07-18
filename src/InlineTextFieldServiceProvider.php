@@ -17,7 +17,6 @@ class InlineTextFieldServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-inline-text', __DIR__ . '/../dist/js/field.js');
-            Nova::style('nova-inline-text', __DIR__ . '/../dist/css/field.css');
         });
     }
 
